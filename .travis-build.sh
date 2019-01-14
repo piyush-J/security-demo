@@ -12,4 +12,6 @@ export REPO_SITE=$SLUGOWNER
 
 . ./setup.sh
 
+echo "Starting security-demo tests"
+
 . ./test-security.sh travis

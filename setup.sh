@@ -23,7 +23,9 @@ fi
 
 (cd $JSR308/checker-framework-inference && ./.travis-build-without-test.sh)
 
-## Fetching DLJC
+
+echo "Fetching DLJC"
+
 if [ -d $JSR308/do-like-javac ] ; then
     (cd $JSR308/do-like-javac && git pull)
 else
@@ -31,5 +33,7 @@ else
     (cd $JSR308 && git clone -b $BRANCH --depth 1 https://github.com/"$REPO_SITE"/do-like-javac.git)
 fi
 
-##### build security without testing
+
+echo "Building security-demo without testing"
+
 (cd $JSR308/security-demo && ./gradlew build -x test --console=plain)
