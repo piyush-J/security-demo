@@ -22,7 +22,7 @@ fi
 # Running test suite
 ./gradlew test --console=plain
 
-CORPUSFILE="worked-benchmarks.yml"
+CORPUSFILE="working-benchmarks.yml"
 
 if [ -n "$1" ] && [ $1 = "travis" ]; then
     # Running Security on working benchmarks
