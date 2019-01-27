@@ -10,14 +10,14 @@ public class TypeCheck {
 
   void parameter(@TopSecret String s1, @Confidential String s2, @Public String s3) {
     topSecretFunc(s1);		// OK
-    // :: fixable-error: (argument.type.incompatible)
+    // :: error: (argument.type.incompatible)
     confidentialFunc(s1);
-    // :: fixable-error: (argument.type.incompatible)
+    // :: error: (argument.type.incompatible)
     publicFunc(s1);
 
     topSecretFunc(s2);		// OK
     confidentialFunc(s2);	// OK
-    // :: fixable-error: (argument.type.incompatible)
+    // :: error: (argument.type.incompatible)
     publicFunc(s2);
 
     topSecretFunc(s3);		// OK
