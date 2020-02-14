@@ -132,6 +132,7 @@ tasks.clean {
     delete += "build"
     delete += "dist"
     delete += "testdata"
+    delete += "tests/build"
 }
 
 // Commented out because plugins section is commented out
