@@ -16,7 +16,7 @@ public class SecurityTest extends CFInferenceTest {
         super(
                 testFile,
                 security.SecurityChecker.class,
-                "ontology",
+                "testing",
                 "-Anomsgtext",
                 "-d",
                 "tests/build/outputdir");
