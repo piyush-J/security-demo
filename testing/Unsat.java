@@ -5,7 +5,8 @@ public class Unsat {
 
   	void inferTop(@TopSecret String p) {
         String s = p;
-        // :: fixable-error: (assignment.type.incompatible)
-        @Public String x = s;
+        // The following commented line will cause no solution for inference
+        // // :: error: (assignment.type.incompatible)
+        // @Public String x = s;
     }
 }
