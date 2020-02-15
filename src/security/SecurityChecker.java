@@ -11,6 +11,7 @@ import org.checkerframework.common.basetype.BaseAnnotatedTypeFactory;
 import org.checkerframework.framework.flow.CFTransfer;
 
 public class SecurityChecker extends BaseInferrableChecker {
+
     @Override
     public void initChecker() {
         super.initChecker();
@@ -39,15 +40,13 @@ public class SecurityChecker extends BaseInferrableChecker {
             BaseAnnotatedTypeFactory realTypeFactory,
             SlotManager slotManager,
             ConstraintManager constraintManager) {
-        SecurityInferenceAnnotatedTypeFactory securityInferenceATF =
-                new SecurityInferenceAnnotatedTypeFactory(
-                        inferenceChecker,
-                        realChecker.withCombineConstraints(),
-                        realTypeFactory,
-                        realChecker,
-                        slotManager,
-                        constraintManager);
-        return securityInferenceATF;
+        return new SecurityInferenceAnnotatedTypeFactory(
+                inferenceChecker,
+                realChecker.withCombineConstraints(),
+                realTypeFactory,
+                realChecker,
+                slotManager,
+                constraintManager);
     }
 
     @Override
