@@ -38,7 +38,7 @@ public class SecurityTest extends CFInferenceTest {
     @Parameters
     public static List<File> getTestFiles() {
         List<File> testfiles = new ArrayList<>();
-        testfiles.addAll(TestUtilities.getJavaFilesAsArgumentList(new File("testing")));
+        testfiles.addAll(TestUtilities.findRelativeNestedJavaFiles("testing", "infer"));
         return testfiles;
     }
 }
