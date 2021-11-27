@@ -1,4 +1,4 @@
 PyGithub
-pyyaml
+pyyaml==5.4.1
 subprocess32>=3.2.6
 lithium
